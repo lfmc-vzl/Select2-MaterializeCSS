@@ -1,0 +1,107 @@
+<!--
+  Autor: @lfmc.vzl | Luis F. Marchán C.
+  E-mail: lfmc.vzl@outlook.com
+  Telegram: https://t.me/lfmc_vzl
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Select2 on Materialize Css by @lfmc.vzl</title>
+        <!-- MATERIAL ICONS -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- CSS | MATERIALIZE CSS -->
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" media="screen,projection" />
+        <!-- CSS | SELECT2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- CSS | INTEGRACIÓN ENTRE SELECT2 & MATERIALIZE CSS -->
+        <link rel="stylesheet" href="./css/select2.materialize.min.css">
+        <!-- JS | JQUERY -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col m6">
+                                <div class="input-field">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" value="Luis Felipe" class="validate">
+                                    <label for="icon_prefix">Nombres</label>
+                                </div>
+                            </div>
+                            <div class="col m6">
+                                <div class="input-field">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="icon_prefix" type="text" value="Marchán Carrasquel" class="validate">
+                                    <label for="icon_prefix">Apellidos</label>
+                                </div>
+                            </div>
+                            <div class="col m6">
+                                <div class="select-wrapper">
+                                    <select name="estados[]">
+                                        <option value="" disabled selected>Elige un estado</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="AN">Anzoátegui</option>
+                                        <option value="AP">Apure</option>
+                                        <option value="AR">Aragua</option>
+                                        <option value="BA">Barinas</option>
+                                        <option value="BO">Bolívar</option>
+                                        <option value="CA">Carabobo</option>
+                                        <option value="CO">Cojedes</option>
+                                        <option value="DA">Delta Amacuro</option>
+                                        <option value="DC">Distrito Capital</option>
+                                        <option value="FA">Falcón</option>
+                                        <option value="GU">Guárico</option>
+                                        <option value="LA">Lara</option>
+                                        <option value="ME">Mérida</option>
+                                        <option value="MI">Miranda</option>
+                                        <option value="MO" selected>Monagas</option>
+                                        <option value="NE">Nueva Esparta</option>
+                                        <option value="PO">Portuguesa</option>
+                                        <option value="SU">Sucre</option>
+                                        <option value="TA">Táchira</option>
+                                        <option value="TR">Trujillo</option>
+                                        <option value="VA">La Guaira</option>
+                                        <option value="YA">Yaracuy</option>
+                                        <option value="ZU">Zulia</option>
+                                    </select>
+                                    <label class="">Estados de venezuela</label>
+                                </div>
+                            </div>
+                            <div class="col m6">
+                                <div class="select-wrapper">
+                                    <i class="material-icons prefix">place</i>
+                                    <select name="comidas[]" multiple="multiple">
+                                        <option value="arepa" selected>Arepa</option>
+                                        <option value="pabellon" selected>Pabellón Criollo</option>
+                                        <option value="hallaca" selected>Hallaca</option>
+                                        <option value="cachapa" selected>Cachapa</option>
+                                        <option value="empanada" selected>Empanada</option>
+                                    </select>
+                                    <label for="icon_prefix">Comidas Típicas de Venezuela</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                $('select').select2();
+            });
+        </script>
+
+        <!-- JS | SELECT2 -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <!-- JS | MATERIALIZE CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!-- JS | INTEGRACIÓN ENTRE SELECT2 & MATERIALIZE CSS -->
+        <script src="./js/select2.materialize.jquery.min.js"></script>
+    </body>
+</html>
